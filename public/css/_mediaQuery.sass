@@ -1,0 +1,36 @@
+// Extra Small Screen Only
+@media screen and (max-width:575px)
+  
+// Small Screen Only
+@media screen and (min-width: 576px) and (max-width:767px)
+
+// Medium Screen Only
+@media screen and (min-width: 768px) and (max-width: 991px)
+  
+
+// Large Screen Only
+@media screen and (min-width: 992px) and (max-width: 1199px)
+  #nav
+    .main-nav
+      a
+        margin: 0 28px
+
+// Extra Large Screen Only
+@media screen and (min-width: 1200px)
+
+// Large to Extra Large Screen
+@media screen and (min-width: 992px)
+  #nav-sm
+    display: none
+
+// Extra Small to Medium Screen
+@media screen and (max-width:991px)
+  #nav
+    display: none
+
+  .container
+    grid-template-areas: "nav-sm nav-sm" "content content" "sidenav sidenav"
+
+  
+    
+  

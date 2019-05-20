@@ -1,0 +1,287 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.eot"), url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.eot"), url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Light.eot"), url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-SemiBold.eot"), url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding-bottom: 250px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto;
+  grid-template-areas: "nav nav" "sidenav content" "sidenav content";
+}
+
+#side-nav {
+  grid-area: sidenav;
+  padding: 0 25px;
+}
+#side-nav > ul {
+  padding-bottom: 15px;
+}
+#side-nav > ul > li {
+  list-style: none;
+}
+#side-nav > ul > li > a {
+  text-decoration: none;
+  color: #343e48;
+  font-weight: 400;
+}
+#side-nav > ul > li:before {
+  content: "•";
+  color: #00a7e0;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 1;
+  vertical-align: middle;
+  width: 20px;
+  margin-left: -1em;
+}
+#side-nav > .side-nav-header {
+  padding: 15px;
+  background-color: #e4e2e2;
+  border-radius: 10px;
+  position: relative;
+  font-weight: 600;
+}
+#side-nav > .side-nav-header:after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  width: 0px;
+  height: 0px;
+  transform: translateY(8px);
+  border-top: 8px solid #e4e2e2;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+
+#content {
+  position: relative;
+  grid-area: content;
+  margin: 15px;
+  margin-right: 25px;
+  padding: 0 35px;
+  border-bottom: 1px solid #bec2c5;
+  border-left: 1px solid #bec2c5;
+  border-right: 1px solid #bec2c5;
+}
+#content:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background-color: #f4f4f4;
+}
+#content h1 {
+  color: #00a7e0;
+  margin: 0;
+  line-height: 25px;
+}
+#content > h3 {
+  color: #343e48;
+  padding-left: 20px;
+  margin: 10px 0;
+  font-weight: 600;
+  font-style: italic;
+}
+#content p {
+  line-height: 175%;
+}
+#content #images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 220px;
+  grid-gap: 20px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+#content #images div {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #00a7e0;
+}
+#content #images div:hover {
+  cursor: pointer;
+}
+#content #images div:hover div {
+  top: 0;
+}
+#content #images div div {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 167, 224, 0.5);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: top 0.3s;
+}
+#content #images div div p, #content #images div div h3 {
+  font-style: normal;
+  display: block;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+#content #images img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#content #images img.translate-sm {
+  transform: translateY(-45%);
+}
+#content #images img.translate-md {
+  transform: translateY(-35%);
+}
+
+#nav {
+  border-bottom: 1px solid #bec2c5;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  grid-area: nav;
+}
+#nav .toggle-icon {
+  display: none;
+}
+#nav #logo {
+  padding: 0 25px;
+}
+#nav .main-nav {
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#nav .main-nav a {
+  color: #343e48;
+  text-decoration: none;
+  margin: 0 50px;
+  font-weight: 600;
+}
+#nav .main-nav a:hover {
+  color: #00a7e0;
+}
+#nav .main-nav a.special-link {
+  height: 100%;
+  line-height: 100px;
+  position: relative;
+  color: white;
+  margin-left: 10px;
+  margin-right: 30px;
+  padding: 0 30px;
+}
+#nav .main-nav a.special-link:after {
+  content: "";
+  background-color: #00a7e0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: skew(-20deg);
+}
+#nav .main-nav a.special-link:hover {
+  color: #343e48;
+}
+
+#nav-sm {
+  grid-area: nav-sm;
+  height: 50px;
+  background-color: white;
+  z-index: 9999;
+  margin-bottom: 20px;
+}
+#nav-sm.responsive .main-nav-sm {
+  height: 160px;
+}
+#nav-sm #logo-sm {
+  height: 70%;
+  padding: 10px 15px;
+}
+#nav-sm .main-nav-sm {
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  margin-top: -22px;
+  height: 0px;
+  transition: height 0.5s;
+}
+#nav-sm .main-nav-sm a {
+  padding: 5px 15px;
+  display: block;
+  color: #343e48;
+  text-decoration: none;
+}
+#nav-sm .main-nav-sm a:hover {
+  color: #00a7e0;
+}
+#nav-sm .toggle-icon {
+  float: right;
+  padding: 15px;
+}
+#nav-sm .toggle-icon:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  #nav .main-nav a {
+    margin: 0 28px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #nav-sm {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  #nav {
+    display: none;
+  }
+
+  .container {
+    grid-template-areas: "nav-sm nav-sm" "content content" "sidenav sidenav";
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

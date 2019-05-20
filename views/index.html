@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../public/css/styles.css" rel="stylesheet" />
+  <link href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css" rel="stylesheet"/>
+  <link href="../node_modules/@fortawesome/fontawesome-free/css/solid.min.css" rel="stylesheet"/>
+  <title>LeaseLabs: Full Stack Marketing</title>
+</head>
+<body>
+  <div class="container">
+    <div id="nav">
+      <img id="logo" src="../public/images/leaselabs_logo_fullstack_rgb.png" />
+      <div class="main-nav">
+        <a href="#">HOME</a>
+        <a href="#">OUR WORK</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
+        <a class="special-link" href="#">SPECIALS</a>
+      </div>
+      <a onclick="toggleNav" class="toggle-icon"><i class="fa fa-bars"></i></a>
+    </div>
+    <div id="nav-sm" class="nav-sm">
+        <img id="logo-sm" src="../public/images/leaselabs_logo_fullstack_rgb.png" />
+        <a onclick="toggleNav()" class="toggle-icon"><i class="fa fa-bars fa-lg"></i></a>
+        <div class="main-nav-sm">
+          <a href="#">HOME</a>
+          <a href="#">OUR WORK</a>
+          <a href="#">ABOUT US</a>
+          <a href="#">CONTACT US</a>
+          <a class="special-link" href="#">SPECIALS</a>
+        </div>
+        
+      </div>
+
+    <div id="side-nav">
+      <p class="side-nav-header">SUBNAV</p>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+      <p class="side-nav-header">RELATED LINKS</p>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <h1>HEADING 1</h1>
+      <h3>heading 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut urna ante, dapibus vestibulum consectetur vel, 
+        condimentum quis nibh. Aenean sed massa quis felis ultrices lobortis sit amet non eros. In finibus nisi non orci 
+        faucibus, vitae mattis libero rutrum. Donec posuere urna ut turpis porttitor, vel condimentum odio faucibus. Donec 
+        in dignissim lectus, sit amet sollicitudin elit. </p>
+      <p>Integer a lacus sit amet tortor posuere semper eget ut justo. Nunc ornare posuere libero scelerisque ultrices. Fusce 
+        vulputate hendrerit iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      <p>Suspendisse augue lacus, dignissim eget eros in, tristique cursus orci. Aliquam dictum magna faucibus libero dapibus, 
+        ac lobortis nulla molestie. Integer vel libero sit amet nisl rhoncus facilisis. Donec non dapibus dui, mollis dignissim 
+        purus. Aliquam vestibulum tempus semper. Phasellus interdum sodales velit. Sed vel mauris sit amet nunc tempus maximus 
+        vitae id risus.</p>
+      <div id="images">
+      </div>
+
+      <!-- <div id="images">
+          <div>
+            <img class="translate-md" src="../public/images/man.jpg"/>
+            <div>Hello</div>
+          </div>
+          <div><img class="translate-sm" src="../public/images/wizard.jpg"/>></div>
+          <div><img src="../public/images/beast.jpg"/></div>
+        </div> -->
+    </div>
+  </div>
+  <template id="image-template">
+    <div>
+      <img class="translate-md" src="../public/images/man.jpg"/>
+      <div>Hello</div>
+    </div>
+  </template>
+  <script src="../public/js/index.js" ></script>
+  
+</body>
+</html>

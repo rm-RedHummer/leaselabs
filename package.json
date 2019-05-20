@@ -1,0 +1,25 @@
+{
+  "name": "test-web-developer",
+  "version": "1.0.0",
+  "description": "LeaseLabs Front-End Web Developer Test\r =============================",
+  "main": "app.js",
+  "dependencies": {
+    "sass": "^1.20.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaselabsco/test-web-developer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leaselabsco/test-web-developer/issues"
+  },
+  "homepage": "https://github.com/leaselabsco/test-web-developer#readme"
+}
