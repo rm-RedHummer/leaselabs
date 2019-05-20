@@ -1,0 +1,45 @@
+#side-nav
+  grid-area: sidenav
+  padding: 0 25px
+
+  &>ul
+    padding-bottom: 15px
+
+  &>ul>li
+    list-style: none
+
+    &>a
+      text-decoration: none
+      color: $text-primary
+      font-weight: 400
+
+    &:before
+      content: "\2022"
+      color: $sky-blue
+      display: inline-block
+      font-weight: 700
+      font-size: 25px
+      line-height: 1
+      vertical-align: middle
+      width: 20px
+      margin-left: -1em
+
+  & > .side-nav-header
+    padding: 15px
+    background-color: $light-gray
+    border-radius: 10px
+    position: relative
+    font-weight: 600
+
+    &:after
+      content:''
+      position: absolute
+      right:50px
+      bottom:0
+      width: 0px
+      height: 0px
+      transform: translateY(8px)
+      -webkit-transform: translateY(8px)
+      border-top: 8px solid $light-gray
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent

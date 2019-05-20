@@ -1,0 +1,92 @@
+#content
+  position: relative
+  grid-area: content
+  margin: 15px
+  margin-right: 25px
+  padding: 0 35px
+  border-bottom: 1px solid $gray
+  border-left: 1px solid $gray
+  border-right: 1px solid $gray
+
+  &:before
+    content:''
+    position: absolute
+    bottom:0
+    left:0
+    right:0
+    height: 7px
+    background-color: $lighter-gray
+
+  h1
+    color:$sky-blue
+    margin: 0
+    line-height: 25px
+  
+  &>h3 
+    color: $text-primary
+    padding-left: 20px
+    margin: 10px 0
+    font-weight: 600
+    font-style: italic
+
+  p
+    line-height: 175%
+  
+  #images
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+    grid-auto-rows: 220px
+    grid-gap: 20px
+    padding-top: 70px
+    padding-bottom: 30px
+    
+
+    div
+      overflow: hidden
+      position: relative
+      border: 1px solid $sky-blue
+      &:hover
+        cursor: pointer
+        & div
+          top:0
+      
+      div
+        position: absolute
+        top:100%
+        bottom:0
+        left:0
+        right:0
+        width: 100%
+        height: 100%
+        background-color: $sky-blue-translucent
+        z-index: 9999
+        display: flex
+        flex-direction: column
+        justify-content: center
+        transition: top .3s
+        -webkit-transition: top .3s
+       
+        
+        p,h3
+          font-style: normal
+          display: block
+          color: white
+          text-align: center
+          margin: 0
+        
+
+      
+    img
+      width: 100%
+      position: relative
+      top: 50%
+      transform: translateY(-50%)
+      -webkit-transform: translateY(-50%)
+
+      &.translate-sm
+        transform: translateY(-45%)
+        -webkit-transform: translateY(-45%)
+
+      &.translate-md
+        transform: translateY(-35%)
+        -webkit-transform: translateY(-35%)
